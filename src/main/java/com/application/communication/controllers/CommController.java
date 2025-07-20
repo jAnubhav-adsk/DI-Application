@@ -6,7 +6,6 @@ import com.google.inject.Inject;
 public abstract class CommController {
     private CommService commService;
 
-    @Inject
     public void setCommService(CommService commService) {
         this.commService = commService;
     }

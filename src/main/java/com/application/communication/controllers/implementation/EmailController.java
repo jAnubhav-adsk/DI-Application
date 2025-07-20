@@ -1,6 +1,9 @@
 package com.application.communication.controllers.implementation;
 
 import com.application.communication.controllers.CommController;
+import com.application.communication.services.implementation.EmailService;
+
+import com.google.inject.Inject;
 
 public class EmailController extends CommController {
     @Override
