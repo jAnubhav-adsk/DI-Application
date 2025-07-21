@@ -5,6 +5,7 @@ import com.application.communication.controllers.implementation.EmailController;
 import com.application.communication.controllers.implementation.SMSController;
 
 import com.application.communication.modules.CommModule;
+import com.application.logger.modules.LoggerModule;
 
 import com.application.communication.services.implementation.EmailService;
 import com.application.communication.services.implementation.SMSService;
@@ -16,7 +17,7 @@ import com.google.inject.Injector;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Injector injector = Guice.createInjector(new CommModule());
+        Injector injector = Guice.createInjector(new CommModule(), new LoggerModule());
         CommController commController = null;
 
         commController = injector.getInstance(EmailController.class);

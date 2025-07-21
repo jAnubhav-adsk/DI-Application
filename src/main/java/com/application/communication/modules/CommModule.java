@@ -10,6 +10,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
 
 public class CommModule extends AbstractModule {
+
     @Override
     public void configure() {
         bind(EmailController.class).in(Scopes.SINGLETON);
